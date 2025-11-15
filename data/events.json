@@ -1,0 +1,107 @@
+[
+  {
+    "id": "meiyu_front",
+    "name": "梅雨鋒面滯留",
+    "description": "華南鋒面滯留帶來長時間降雨，北中部水庫進帳明顯。",
+    "start_month": 5,
+    "end_month": 6,
+    "first_year": 1,
+    "rainfall_delta": 0.2,
+    "intensity_delta": 0.05,
+    "southwest_delta": 0.08,
+    "mana_cost_rate": 0.9,
+    "satisfaction_delta": 0.03,
+    "disaster_delta": 0.12,
+    "news_on_start": [
+      "梅雨鋒面滯留台灣上空，氣象單位提醒留意豪雨。",
+      "水利署表示：梅雨水氣有望為北部水庫補充蓄水。"
+    ],
+    "news_on_end": [
+      "梅雨鋒面北移，降雨逐漸緩和。"
+    ]
+  },
+  {
+    "id": "pacific_high",
+    "name": "太平洋高壓盤據",
+    "description": "高壓籠罩造成炎熱少雨，颱風生成難度提高。",
+    "start_month": 7,
+    "end_month": 8,
+    "first_year": 1,
+    "rainfall_delta": -0.18,
+    "intensity_delta": -0.12,
+    "southwest_delta": -0.05,
+    "mana_cost_rate": 1.2,
+    "satisfaction_delta": -0.04,
+    "disaster_delta": -0.1,
+    "news_on_start": [
+      "太平洋高壓增強，台灣轉為炎熱乾燥。",
+      "農業單位示警：田間灌溉需求上升，請妥善調度水資源。"
+    ],
+    "news_on_end": [
+      "太平洋高壓勢力減弱，午後對流雨勢逐步回升。"
+    ]
+  },
+  {
+    "id": "autumn_typhoon",
+    "name": "秋季颱風增生成期",
+    "description": "西北太平洋海溫偏暖，秋颱可能連續影響台灣。",
+    "start_month": 9,
+    "end_month": 10,
+    "first_year": 1,
+    "rainfall_delta": 0.12,
+    "intensity_delta": 0.18,
+    "southwest_delta": 0.05,
+    "mana_cost_rate": 1.15,
+    "satisfaction_delta": 0.02,
+    "disaster_delta": 0.15,
+    "news_on_start": [
+      "氣象中心指出：秋季海溫偏高，生成颱風強度恐提高。",
+      "地方政府備戰：秋颱防災演練全面啟動。"
+    ],
+    "news_on_end": [
+      "秋季颱風生成趨緩，海面熱度逐漸下降。"
+    ]
+  },
+  {
+    "id": "northeast_monsoon",
+    "name": "東北季風強化",
+    "description": "東北季風南下帶來潮濕冷空氣，北部與東部容易有連續降雨。",
+    "start_month": 11,
+    "end_month": 12,
+    "first_year": 1,
+    "rainfall_delta": 0.08,
+    "intensity_delta": -0.05,
+    "southwest_delta": -0.08,
+    "mana_cost_rate": 1.05,
+    "satisfaction_delta": -0.02,
+    "disaster_delta": 0.05,
+    "news_on_start": [
+      "東北季風報到，北海岸風雨轉趨明顯。",
+      "交通部提醒：山區道路恐有落石坍方風險。"
+    ],
+    "news_on_end": [
+      "東北季風勢力減弱，天氣逐步回穩。"
+    ]
+  },
+  {
+    "id": "election_cycle",
+    "name": "選舉敏感期",
+    "description": "選前民意高度敏感，任何停班停課與災情訊息都被放大檢視。",
+    "start_month": 10,
+    "end_month": 11,
+    "first_year": 2,
+    "rainfall_delta": 0.0,
+    "intensity_delta": 0.0,
+    "southwest_delta": 0.0,
+    "mana_cost_rate": 1.1,
+    "satisfaction_delta": -0.06,
+    "disaster_delta": 0.1,
+    "news_on_start": [
+      "選舉年倒數，地方首長要求天氣之神提供精準預報。",
+      "民調顯示：民眾對停班停課判斷高度關注。"
+    ],
+    "news_on_end": [
+      "選舉落幕，社會氛圍回歸常態。"
+    ]
+  }
+]
