@@ -1,4 +1,4 @@
-"""互動元件定義。"""
+"""Interactive UI element definitions."""
 from __future__ import annotations
 
 from dataclasses import dataclass

@@ -1,4 +1,4 @@
-"""地圖呈現。"""
+"""Map rendering utilities."""
 from __future__ import annotations
 
 from typing import Iterable, Optional

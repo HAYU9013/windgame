@@ -1,28 +1,28 @@
 [
   {
     "id": "office_workers",
-    "name": "上班族",
+    "name": "Office Workers",
     "typhoon_holiday_preference": 0.8,
     "flood_tolerance": 0.4,
     "drought_tolerance": 0.5
   },
   {
     "id": "farmers",
-    "name": "農民",
+    "name": "Agriculture Sector",
     "typhoon_holiday_preference": 0.3,
     "flood_tolerance": 0.5,
     "drought_tolerance": 0.2
   },
   {
     "id": "students",
-    "name": "學生",
+    "name": "Students",
     "typhoon_holiday_preference": 1.0,
     "flood_tolerance": 0.35,
     "drought_tolerance": 0.6
   },
   {
     "id": "government",
-    "name": "政府",
+    "name": "Government",
     "typhoon_holiday_preference": 0.4,
     "flood_tolerance": 0.2,
     "drought_tolerance": 0.5

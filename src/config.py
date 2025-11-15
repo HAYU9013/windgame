@@ -1,4 +1,4 @@
-"""遊戲設定常數。"""
+"""Game configuration constants."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -10,12 +10,12 @@ SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
 FPS = 60
 
-# 介面區域
+# Interface layout
 MAP_AREA = (0, 0, 880, 640)
 PANEL_AREA = (880, 0, 400, 640)
 TICKER_AREA = (0, 640, 1280, 80)
 
-# 顏色設定
+# Color palette
 COLOR_BACKGROUND = (12, 19, 28)
 COLOR_MAP = (24, 46, 66)
 COLOR_PANEL_BG = (32, 40, 56)

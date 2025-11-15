@@ -1,4 +1,5 @@
 from pathlib import Path
+import random
 
 import pytest
 
@@ -8,7 +9,7 @@ from src.game_state import GameState, format_percentage, format_resource
 
 def create_state() -> GameState:
     repo = DataRepository(base_path=Path(__file__).resolve().parent.parent)
-    return GameState(repo)
+    return GameState(repo, rng=random.Random(0))
 
 
 def test_adjust_parameter_consumes_mana_and_generates_news():
@@ -21,7 +22,7 @@ def test_adjust_parameter_consumes_mana_and_generates_news():
     assert pytest.approx(initial_mana - expected_cost, rel=1e-6) == adjusted_mana
 
     state.step_simulation(1)
-    assert any("颱風強度" in message for message in state.news)
+    assert any("Typhoon Intensity" in message for message in state.news)
 
 
 def test_adjust_parameter_respects_mana_limit():
@@ -51,7 +52,7 @@ def test_event_news_triggered_after_advancing_months():
     state = create_state()
     state.step_simulation(720 * 4)
 
-    assert any("梅雨鋒面" in message for message in state.news)
+    assert any("Meiyu front" in message for message in state.news_history)
 
 
 def test_change_time_scale_records_news():
@@ -60,7 +61,7 @@ def test_change_time_scale_records_news():
     state.step_simulation(1)
 
     assert state.time_scale == 2
-    assert any("快轉" in message for message in state.news)
+    assert any("Fast mode" in message for message in state.news)
 
 
 def test_positive_satisfaction_awards_resources():
@@ -85,13 +86,13 @@ def test_format_helpers():
 
 def test_spotlights_reflect_conditions():
     state = create_state()
-    assert state.spotlights, "初始化時應至少提供一則焦點資訊"
+    assert state.spotlights, "Expected at least one spotlight during initialization"
 
     for reservoir in state.repository.reservoirs:
         reservoir.storage = reservoir.capacity * 0.2
     state._refresh_spotlights()
     titles = {title for title, _ in state.spotlights}
-    assert "水情告急" in titles
+    assert "Water Supply Alert" in titles
 
     state.satisfaction.civil_support = 0.42
     state.satisfaction.agriculture_support = 0.41
@@ -99,6 +100,33 @@ def test_spotlights_reflect_conditions():
     state.satisfaction.government_support = 0.74
     state._refresh_spotlights()
     titles = {title for title, _ in state.spotlights}
-    assert "壓力焦點" in titles
-    assert "民意加分" in titles
-    assert any(title.endswith("態勢") for title in titles)
+    assert "Pressure Spotlight" in titles
+    assert "Public Approval Boost" in titles
+    assert any(title.endswith("Outlook") for title in titles)
+
+
+def test_survival_metrics_decay_and_response():
+    state = create_state()
+    initial_support = state.survival.public_support
+
+    state.step_simulation(12)
+
+    assert state.survival.public_support < initial_support
+
+    mana_before = state.resources.mana
+    state.apply_response("campaign")
+
+    assert state.resources.mana < mana_before
+    assert state.survival.public_support > initial_support
+
+
+def test_game_over_when_metric_depleted():
+    state = create_state()
+    state.survival.public_support = 0.2
+
+    state.step_simulation(1)
+
+    assert state.game_over
+    assert state.game_over_reason is not None
+    assert "Public Support" in state.game_over_reason
+    assert state.survival_summary
