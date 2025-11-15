@@ -1,7 +1,7 @@
 [
   {
     "id": "taipei",
-    "name": "臺北市",
+    "name": "Taipei City",
     "population_weight": 1.0,
     "agriculture_weight": 0.2,
     "flood_threshold": 0.6,
@@ -9,7 +9,7 @@
   },
   {
     "id": "new_taipei",
-    "name": "新北市",
+    "name": "New Taipei City",
     "population_weight": 0.9,
     "agriculture_weight": 0.3,
     "flood_threshold": 0.65,
@@ -17,7 +17,7 @@
   },
   {
     "id": "taichung",
-    "name": "臺中市",
+    "name": "Taichung City",
     "population_weight": 0.7,
     "agriculture_weight": 0.6,
     "flood_threshold": 0.55,
@@ -25,7 +25,7 @@
   },
   {
     "id": "tainan",
-    "name": "臺南市",
+    "name": "Tainan City",
     "population_weight": 0.5,
     "agriculture_weight": 0.7,
     "flood_threshold": 0.5,
@@ -33,7 +33,7 @@
   },
   {
     "id": "kaohsiung",
-    "name": "高雄市",
+    "name": "Kaohsiung City",
     "population_weight": 0.6,
     "agriculture_weight": 0.5,
     "flood_threshold": 0.45,

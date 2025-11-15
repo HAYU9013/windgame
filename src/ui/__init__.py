@@ -1,1 +1,1 @@
-"""UI 元件模組。"""
+"""User interface components package."""

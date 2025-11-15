@@ -1,4 +1,4 @@
-"""資料載入工具。"""
+"""Utilities for loading static data sets."""
 from __future__ import annotations
 
 import json
@@ -63,7 +63,7 @@ class SeasonalEventDefinition:
 
 
 class DataRepository:
-    """集中管理靜態資料。"""
+    """Provide cached access to static data files."""
 
     def __init__(self, base_path: Path | None = None) -> None:
         self.base_path = base_path or Path(__file__).resolve().parent.parent

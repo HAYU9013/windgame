@@ -20,8 +20,8 @@ def test_repository_caches_loaded_regions(tmp_path):
 def test_seasonal_event_wraparound_month_active():
     event = SeasonalEventDefinition(
         event_id="test",
-        name="跨年事件",
-        description="測試月份跨越年度",
+        name="Year-End Event",
+        description="Test wrap-around months",
         start_month=11,
         end_month=2,
         first_year=1,

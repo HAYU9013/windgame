@@ -1,4 +1,4 @@
-"""季節與特殊事件管理。"""
+"""Management for seasonal and special events."""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -26,7 +26,7 @@ class EventModifiers:
 
 
 class EventManager:
-    """負責啟用與管理季節、特殊事件。"""
+    """Handle activation and management of seasonal and special events."""
 
     def __init__(self, events: Iterable[SeasonalEventDefinition]) -> None:
         self._events = list(events)

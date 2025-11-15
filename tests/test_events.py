@@ -7,8 +7,8 @@ from src.events import EventManager
 def make_event(event_id: str, start: int, end: int, *, mana_rate: float = 1.0, rainfall: float = 0.0):
     return SeasonalEventDefinition(
         event_id=event_id,
-        name=f"事件-{event_id}",
-        description="測試事件",
+        name=f"Event-{event_id}",
+        description="Test event",
         start_month=start,
         end_month=end,
         first_year=1,
