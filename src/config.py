@@ -1,0 +1,39 @@
+"""遊戲設定常數。"""
+from __future__ import annotations
+
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+ASSETS_DIR = BASE_DIR / "assets"
+
+SCREEN_WIDTH = 1280
+SCREEN_HEIGHT = 720
+FPS = 60
+
+# 介面區域
+MAP_AREA = (0, 0, 880, 640)
+PANEL_AREA = (880, 0, 400, 640)
+TICKER_AREA = (0, 640, 1280, 80)
+
+# 顏色設定
+COLOR_BACKGROUND = (12, 19, 28)
+COLOR_MAP = (24, 46, 66)
+COLOR_PANEL_BG = (32, 40, 56)
+COLOR_PANEL_ACCENT = (70, 95, 120)
+COLOR_TEXT_PRIMARY = (230, 236, 243)
+COLOR_TEXT_SECONDARY = (173, 186, 199)
+COLOR_STATUS_POSITIVE = (76, 175, 80)
+COLOR_STATUS_NEGATIVE = (244, 67, 54)
+COLOR_TICKER_BG = (10, 16, 24)
+COLOR_TICKER_TEXT = (255, 220, 128)
+COLOR_BUTTON_BG = (55, 79, 107)
+COLOR_BUTTON_ACTIVE = (90, 129, 167)
+COLOR_SLIDER_TRACK = (80, 105, 132)
+COLOR_SLIDER_HANDLE = (210, 235, 250)
+
+FONT_PATH = None
+MAP_BASE_IMAGE = ASSETS_DIR / "graphics" / "taiwan_map_base.png"
+MAP_RELIEF_IMAGE = ASSETS_DIR / "graphics" / "taiwan_relief_overlay.png"
+TITLE_FONT_SIZE = 24
+TEXT_FONT_SIZE = 18
+SMALL_FONT_SIZE = 16

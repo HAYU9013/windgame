@@ -1,0 +1,26 @@
+[
+  {
+    "id": "shimen",
+    "name": "石門水庫",
+    "region_id": "new_taipei",
+    "capacity": 100.0,
+    "storage": 65.0,
+    "coordinates": [610, 240]
+  },
+  {
+    "id": "zengwen",
+    "name": "曾文水庫",
+    "region_id": "tainan",
+    "capacity": 90.0,
+    "storage": 40.0,
+    "coordinates": [510, 410]
+  },
+  {
+    "id": "deji",
+    "name": "德基水庫",
+    "region_id": "taichung",
+    "capacity": 70.0,
+    "storage": 55.0,
+    "coordinates": [560, 320]
+  }
+]

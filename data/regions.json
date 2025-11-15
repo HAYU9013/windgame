@@ -1,0 +1,42 @@
+[
+  {
+    "id": "taipei",
+    "name": "臺北市",
+    "population_weight": 1.0,
+    "agriculture_weight": 0.2,
+    "flood_threshold": 0.6,
+    "coordinates": [640, 200]
+  },
+  {
+    "id": "new_taipei",
+    "name": "新北市",
+    "population_weight": 0.9,
+    "agriculture_weight": 0.3,
+    "flood_threshold": 0.65,
+    "coordinates": [600, 220]
+  },
+  {
+    "id": "taichung",
+    "name": "臺中市",
+    "population_weight": 0.7,
+    "agriculture_weight": 0.6,
+    "flood_threshold": 0.55,
+    "coordinates": [550, 330]
+  },
+  {
+    "id": "tainan",
+    "name": "臺南市",
+    "population_weight": 0.5,
+    "agriculture_weight": 0.7,
+    "flood_threshold": 0.5,
+    "coordinates": [520, 420]
+  },
+  {
+    "id": "kaohsiung",
+    "name": "高雄市",
+    "population_weight": 0.6,
+    "agriculture_weight": 0.5,
+    "flood_threshold": 0.45,
+    "coordinates": [560, 470]
+  }
+]
